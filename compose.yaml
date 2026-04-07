@@ -1,0 +1,11 @@
+services:
+  zmk:
+    build:
+      context: .
+      args:
+        USER_ID: ${USER_ID:-1000}
+        GROUP_ID: ${GROUP_ID:-1000}
+        USERNAME: ${USER:-developer}
+    volumes:
+      - '.:/app'
+      - '~/.ssh:/home/${USER:-developer}/.ssh:ro'

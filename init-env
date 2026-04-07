@@ -1,0 +1,2 @@
+#!/bin/bash
+echo -e "USER_ID=$(id -u)\nGROUP_ID=$(id -g)" > .env
